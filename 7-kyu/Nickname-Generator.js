@@ -1,3 +1,9 @@
 function nicknameGenerator(name){
-  //code goes here
+  if(name.length < 4) {
+    return "Error: Name too short"
+  }
+  if([..."aeiou"].includes(name.charAt(2))) {
+    return name.slice(0, 4);
+  }
+  return name.slice(0, 3);
 }
